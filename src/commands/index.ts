@@ -1,2 +1,3 @@
 import debug from './debug';
-export default [debug];
+import general from './general';
+export default [debug, general];

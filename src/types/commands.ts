@@ -3,6 +3,8 @@ import {
 	Client,
 	ChatInputCommandInteraction,
 	SlashCommandBuilder,
+	APIMessageComponent,
+	APIMessageComponentEmoji,
 } from 'discord.js';
 
 type LoggerFunction = (...args: unknown[]) => void;
@@ -22,7 +24,12 @@ export interface Command {
 	exec: CommandExec;
 }
 
-export interface CommandCategory {
+export interface CommandCategoryExtra {
+	description?: string;
+	emoji?: APIMessageComponentEmoji;
+}
+
+export interface CommandCategory extends CommandCategoryExtra {
 	name: string;
 	commands: Command[];
 }
