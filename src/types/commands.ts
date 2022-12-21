@@ -3,7 +3,6 @@ import {
 	Client,
 	ChatInputCommandInteraction,
 	SlashCommandBuilder,
-	APIMessageComponent,
 	APIMessageComponentEmoji,
 } from 'discord.js';
 
